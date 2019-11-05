@@ -1,0 +1,7 @@
+<div class="header">{{title}}</div>
+<div class="content standard">
+    <div class="standard-skills">
+        <div *ngFor="let name of standardSkills;let i = index" class="standard-skill-content shadow-sm" [class.hilight]="hilight[i]"
+            (click)="addToMappedSkills(i)">{{name}}</div>
+    </div>
+</div>

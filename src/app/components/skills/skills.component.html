@@ -1,0 +1,7 @@
+<div class="header">{{title}}</div>
+<div class="content shadow-sm">
+    <div class="skills">
+        <div *ngFor="let skill of skills;let i = index" [class.hilight]="hilight[i]" class="skill-content shadow-sm" (click)="selectSkill(i)">
+            {{skill?.description}}</div>
+    </div>
+</div>

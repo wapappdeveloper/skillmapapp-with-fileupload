@@ -1,0 +1,13 @@
+<div class="description">Job Description: <span class="title">Head of Ethics and Compliance</span></div>
+<div class="skill-detail-container">
+    <div class="col col-a shadow-sm">
+        <app-skills [title]="'Skills'" [skills]="skills" (selected)="selectedSkill($event)"></app-skills>
+    </div>
+    <div class="col col-b shadow-sm">
+        <app-standard-skills [title]="'Standard Skills'" [standardSkills]="standardSkills" [hilight]="hilight"
+            (selected)="selectedStandardSkill($event)"></app-standard-skills>
+    </div>
+    <div class="col col-c shadow-sm">
+        <app-mapped-skills [title]="'Mapped Skills'" [mappedSkills]="mappedSkills" (remove)="removeSkill($event)"></app-mapped-skills>
+    </div>
+</div>

@@ -1,0 +1,6 @@
+<div class="header">{{title}}</div>
+<div class="content mapped">
+    <div class="mapped-skills">
+        <div *ngFor="let skillName of mappedSkills;let i = index" class="mapped-skill-content" (click)="removeSelectedSkill(i, skillName)">{{skillName}}</div>
+    </div>
+</div>

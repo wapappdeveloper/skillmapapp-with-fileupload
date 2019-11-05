@@ -1,0 +1,27 @@
+<div class="file-upload-container">
+  <div class="file-upload-holder">
+    <div class="title">UPLOAD JOB DESCRIPTION FILE</div>
+    <div class="file-upload-bucket">
+      <div class="file-upload-text-1">Drag and Drop files here</div>
+      <div class="file-upload-text-2">OR</div>
+      <div class="file-upload-text">
+        <p-fileUpload mode="basic" name="demo[]" customUpload="true" (uploadHandler)="myUploader($event)" accept=""
+          maxFileSize="5000000" chooseLabel="Browse">
+          <ng-template pTemplate="content">
+            <ul *ngIf="uploadedFiles.length">
+              <li *ngFor="let file of uploadedFiles">{{file.name}} - {{file.size}} bytes</li>
+            </ul>
+          </ng-template>
+        </p-fileUpload>
+      </div>
+      <div class="file-upload-text-3">File size: 5mb (maximum)</div>
+      <div class="file-upload-text-4">File formats: EXCEL, PDF, MS WORD</div>
+    </div>
+  </div>
+</div>
+<div class="dialogue" *ngIf="display">
+  <p-progressBar [value]="value"></p-progressBar>
+  <div class="spinner">
+    <p-progressSpinner></p-progressSpinner>
+  </div>
+</div>
